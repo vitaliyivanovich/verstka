@@ -64,7 +64,7 @@ body {
       margin-top: 92px;
       max-width: 540px;
       text-align: center;
-      margin-left: 33px;    
+      margin-left: 35px;    
       h2 {
         font-size: 35px;
         font-weight: 600;
@@ -104,6 +104,7 @@ body {
         border-radius: 4px;
         padding: 0 15px;
         font-size: 14px;
+        letter-spacing: 0.25px;
         color: black;
         &::placeholder {
           color: #9fa5c2;
@@ -160,6 +161,7 @@ body {
               display: none;
             }
             p {
+              font-family: 'OpenSans-Light';
               &::after{
                 display: inline-block;
                 margin-left: 4px;
@@ -178,7 +180,6 @@ body {
         }
         p {
           font-size: 14px;
-          letter-spacing: -0.35px;
         }
         .custom-checkbox {
           position: absolute;
@@ -375,6 +376,7 @@ body {
     }
     .slider {
       display: flex;
+      justify-content: center;
       margin-top: 25px;
       .slick-dots li button:before {
         font-size: 15px;
@@ -385,31 +387,37 @@ body {
       .slick-dots {
         bottom: -65px;
       }
+      .slick-list {
+        width: 100%;
+      }
       .slider_item {
         width: 33.3%;
         text-align: center;
         padding: 0 25px;
-        img {
-          margin: 0 auto;
-        }
-        h3 {
-          font-size: 24px;
-          margin-top: 18px;
-          margin-bottom: 19px;
-          color: $fontgrey;
-        }
-        div {
-          width: 100%;
-          height: 1px;
-          background-color: $icon;
-        }
-        p {
-          font-family: 'OpenSans-Light';
-          margin-top: 31px;
-          font-size: 16px;
-          line-height: 25px;
-          padding: 0 8px;
-          color: $fontlabel;
+        .wrapper {
+          /*width: 400px;*/
+          img {
+            margin: 0 auto;
+          }
+          h3 {
+            font-size: 24px;
+            margin-top: 18px;
+            margin-bottom: 19px;
+            color: $fontgrey;
+          }
+          div {
+            width: 100%;
+            height: 1px;
+            background-color: $icon;
+          }
+          p {
+            font-family: 'OpenSans-Light';
+            margin-top: 31px;
+            font-size: 16px;
+            line-height: 25px;
+            padding: 0 8px;
+            color: $fontlabel;
+          }
         }
       }
     }
@@ -668,19 +676,23 @@ body {
 //video
 .video {
   background-color: #f7f7f7;
-  margin-top: 206px;
+  margin-top: 135px;
   position: relative;
   #video {
     position: absolute;
-    top: -130px;
+    top: -70px;
   }
   .content_wrapper {
+    margin-top: 70px;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 197px;
     h2 {
       font-size: 34px;
+      z-index: 2;
     }
     p {
+      z-index: 2;
       font-family: 'OpenSans-Light';
       font-size: 18px;
       margin-top: 17px;
@@ -694,8 +706,9 @@ body {
       height: 100%;
     }*/
     .mycontainer {
+      z-index: 1;
       position: relative;
-      margin-top: -180px;
+      margin-top: -110px;
       max-width: 1020px;
        width: 100%;
        height: 0;
@@ -720,11 +733,16 @@ body {
     }
   }
 }
-
+@media screen and (max-width:800px) {
+  .video {
+    
+  }
+}
 @media screen and (max-width:600px) {
   .video {
     margin-top: 186px;
     .content_wrapper {
+      padding-bottom: 197px;
       h2 {
         font-size: 24px;
       }
@@ -741,6 +759,15 @@ body {
   }
 }
 
+@media screen and (max-width:400px) {
+  .video {
+    margin-top: 119px;
+    .content_wrapper {
+      padding-bottom: 150px;
+    }
+  }
+}
+
 
 
 
@@ -752,7 +779,7 @@ body {
     position: absolute;
     top: -130px;
   }
-  margin-top: 340px;
+  margin-top: 70px;
   .content_wrapper{
     h2 {
       font-size: 34px;
@@ -786,11 +813,17 @@ body {
               margin-left: auto;
               min-width: 58%;
               padding-left: 5px;
+              .line {
+                height: 1px;
+                background-color: $mygrey;
+                width: 100%;
+                margin-bottom: 30px;
+              }
               h2 {
                 text-align: left;
                 font-size: 20px;
                 color: $buttoncolor;
-                margin: 28px 0 46px 0;
+                margin: 28px 0 15px 0;
                 font-weight: bold;
                 font-family: 'OpenSans-Bold';
               }
@@ -800,6 +833,9 @@ body {
                 font-family: 'OpenSans-Light';
                 line-height: 25px;
                 color: $fontlabel;
+              }
+              .first{
+                margin-top: 10px;
               }
             }  
           }
@@ -811,7 +847,7 @@ body {
 
 @media screen and (max-width:1000px) {
   .mentors{
-  margin-top: 340px;
+  margin-top: 70px;
   .content_wrapper{
     h2 {
       font-size: 34px;
@@ -868,7 +904,7 @@ body {
 
 @media screen and (max-width:700px) {
   .mentors {
-    margin-top: 243px;
+    margin-top: 75px;
     .content_wrapper{
       h2 {
         font-size: 24px;
@@ -906,7 +942,7 @@ body {
                   text-align: center;
                   font-size: 18px;
                   color: $buttoncolor;
-                  margin: 26px 0px 23px 0;
+                  margin: 26px 0px 0px 0;
                   font-weight: bold;
                   font-family: 'OpenSans-Bold';
                 }
@@ -916,6 +952,9 @@ body {
                   font-family: 'OpenSans-Light';
                   line-height: 22px;
                   font-size: 14px;
+                }
+                .first {
+                  margin-top: -9px;
                 }
               }  
             }
@@ -932,7 +971,7 @@ body {
 //map
 
 .map {
-  margin-top: 57px;
+  margin-top: 61px;
 }
 
 
@@ -1046,3 +1085,5 @@ body {
     }
   }
 }
+
+

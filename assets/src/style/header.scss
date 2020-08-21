@@ -31,7 +31,8 @@ header{
             }
         }
         .main_menu {
-            margin-left: auto;           
+            margin-left: auto;
+            margin-right: -2px;           
             ul {
                 display: flex;
                 margin-right: 0px;
@@ -41,7 +42,6 @@ header{
                         border: 0;
                         border-radius: 20px;
                         background: $buttoncolor;
-                        padding: 12px 21px;
                         font-size: 14px;
                         margin: 0;
                         a {
@@ -50,7 +50,6 @@ header{
                     }
                 li{
                     margin: 0 2px;
-                    padding: 10px 18px;
                     font-size: 14px;
                     &:hover {
                         background-color: #f7f7f7;
@@ -61,13 +60,18 @@ header{
                     a {
                         text-decoration: none;
                         color: $fontlabel;
+                        padding: 10px 18px;
+                        display: block;
                     }
                 }
                 .button {
+                    a {
+                        padding: 13px 21px;
+                    }
                     &:hover {
                         background-color: $buttoncolor;
                         a {
-                            color: white;    
+                            color: white;   
                         }
                     }
                 }
@@ -89,7 +93,7 @@ header{
     top: 70px;
     width: calc(100% + 15px);
     background-color:white;
-    box-shadow: 0px 3px 10px #e4e4e4;
+    box-shadow: 0px 8px 10px #e4e4e4;
     transition: all .5s;
     overflow: hidden;
     ul {
@@ -98,13 +102,22 @@ header{
         padding-left: 15px !important;
         margin-top: -5px !important;
         li {
-            padding-top: 16px !important;
+            padding-top: 0px !important;
+            margin: 4px 2px !important;
+            font-size: 14px;
+            &:hover {
+                background-color: white;
+                a   {
+                    background-color: #f7f7f7;     
+                }
+                
         }
         .button {
-            padding-top: 12px !important;;
+            padding-top: 0px !important;;
             margin-top: 4px !important;;
         }
     }
+}
 }
 
 .shown {
